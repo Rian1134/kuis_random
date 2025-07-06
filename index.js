@@ -35,7 +35,7 @@ if(localStorage.getItem("soal9") == "benar"){
     skor++;
 }
 if(localStorage.getItem("soal10") == "benar"){
-    skor+=2;
+    skor++;
 }
 
 Skor.textContent = skor + "/10";
