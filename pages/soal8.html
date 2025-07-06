@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 8</h2>
+
+        <p class="soal">
+           Operasi militer yang dilakukan kekaisaran Jepang pada 
+           saat pertempuran di pulau Okinawa yang mengakibatkan 
+           tenggelam nya kapal ijn Yamato adalah operasi 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan8" id="salah1">
+                <label for="salah1">operasi barbarosa</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan8" id="salah2">
+                <label for="salah2">operasi battle of midway</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan8" id="benar8">
+                <label for="benar8">operssi Ten-go</label>
+            </div>
+      
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan8" id="salah4">
+                <label for="salah4">operasi Trikora</label>
+            </div>
+            
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan8" id="salah3">
+                <label for="salah3">operasi kamikaze</label>
+            </div>
+
+        </div>
+        <div class="btn-area">
+            <a href="soal7.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal9.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar8').checked){
+                localStorage.setItem('soal2', 'benar');
+            }
+            else{
+                localStorage.setItem('soal8', 'salah');
+            }
+        }
+        localStorage.getItem("soal8");
+    </script>
+</body>
+</html>

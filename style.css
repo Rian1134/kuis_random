@@ -1,0 +1,223 @@
+:root{
+    --clr-blue1: rgb(128, 216, 251);
+    --clr-blue2: rgb(80, 150, 255);
+    --clr-lime1: rgb(167, 250, 167);
+    --clr-lime2: rgb(88, 249, 88);
+    --clr-red1: rgb(255, 48, 48);
+    --clr-red2: rgb(191, 0, 0);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(var(--clr-blue1), var(--clr-lime1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul{
+    text-align: center;
+}
+
+.teks{
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.btn{
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--clr-blue1);
+    border: 2px solid var(--clr-blue2);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    border: 2px solid var(--clr-lime2);
+    background-color: rgb(255, 255, 255);
+    color: var(--clr-lime1);
+    border-radius: 20px;
+}
+
+.btn:active{
+    border: 2px solid var(--clr-lime2);
+    background-color: var(--clr-lime1);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.btn-area{
+    margin: 30px;
+    justify-self: space-between;
+}
+
+.btn-page{
+    margin: 3px;
+    color: var(--clr-blue1);
+    border-radius: 50%;
+    font-size: 20px;
+   
+}
+
+.btn-page:hover{
+    color: var(--clr-lime1);
+}
+
+.btn-submit{
+    margin:3px;
+    padding: 10px;
+    color: var(--clr-blue1);
+    border-radius: 50%;
+    background-color: var(--clr-blue1);
+    border: 2px solid var(--clr-blue2);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.btn-submit:hover{
+    border: 2px solid var(--clr-blue2);
+    background-color: rgb(255, 255, 255);
+    color: var(--clr-blue1);
+    border-radius: 20px;
+}
+
+.btn-submit:active{
+    border: 2px solid var(--clr-lime2);
+    background-color: var(--clr-lime1);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.btn-reset{
+    margin:3px;
+    padding: 10px;
+    color: var(--clr-red1);
+    border-radius: 50%;
+    background-color: var(--clr-red1);
+    border: 2px solid var(--clr-red2);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn-reset:hover{
+    border: 2px solid var(--clr-red2);
+    background-color: rgb(255, 255, 255);
+    color: var(--clr-red1);
+    border-radius: 20px;
+}
+
+.btn-reset:active{
+    border: 2px solid var(--clr-lime2);
+    background-color: var(--clr-lime1);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.warna{
+    background-color: #fff360;
+    margin: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.soal{
+    margin: 20px 10px 10px;
+    text-align: justify;
+}
+
+.pilihan{
+    margin: 0px;
+    padding: 10px;
+    justify-self: self-start;
+    align-self: self-start;
+}
+
+.jawaban{
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jawaban label{
+    padding: 5px 5px;
+    border: 2px solid var(--clr-lime2);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.jawaban .radio:checked + label{
+    background-color: var(--clr-lime1);
+    border: 2px solid var(--clr-lime2);
+    color: white;
+}
+
+.jawaban .radio{
+    display: none;
+}
+
+.jawaban .radio:checked + label::after{
+    border: 2px solid white;
+}
+
+
+.jawaban .radio:checked + label::before{
+    background-color: white;
+}
+
+.senku{
+    width: 100px;
+}
+
+.img img{
+    width: 200px;
+    height: 200px;
+}
+
+.skor{
+    font-size: 100px;
+}
+
+#perfect{
+    display: none;
+    margin: 10px;
+}
+
+#dongo{
+    display: none;
+    margin: 10px;
+}

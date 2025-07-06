@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 9</h2>
+
+        <p class="soal">
+            dibawah ini manakah yang  merupakan bentuk shiny dari pokemon Garchomp 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan9" id="salah1">
+                <label for="salah1"><img src="https://img.pokemondb.net/sprites/diamond-pearl/normal/garchomp-f.png" alt="Garchomp"></label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan9" id="benar9">
+                <label for="benar9"><img src="https://img.pokemondb.net/sprites/diamond-pearl/shiny/garchomp-f.png" alt="garchomp"></label>
+            </div>
+
+        </div>
+        <div class="btn-area">
+            <a href="soal8.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal10.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar9').checked){
+                localStorage.setItem('soal9', 'benar');
+            }
+            else{
+                localStorage.setItem('soal9', 'salah');
+            }
+        }
+        localStorage.getItem("soal9");
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 5</h2>
+
+        <p class="soal">
+            ⩗┤╎⍊ᒷ ▭ ᖘϟ ▭ ᔮᒍᒲᒲᖋリ↸⎽ᕊ|:ᒍᔮ·ǀ· <br><br>
+            arti dari teks di atas adalah 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah1">
+                <label for="salah1">/give @s ender_chest</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="benar5">
+                <label for="benar5">/give @s command_block</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah3">
+                <label for="salah3">/summon ender_dragon</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah2">
+                <label for="salah2">/effect @a bad_omen</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah4">
+                <label for="salah4">saya tidak tahu</label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal4.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal6.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar5').checked){
+                localStorage.setItem('soal5', 'benar');
+            }
+            else{
+                localStorage.setItem('soal5', 'salah');
+            }
+        }
+        localStorage.getItem("soal5");
+    </script>
+</body>
+</html>

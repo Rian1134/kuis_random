@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 4</h2>
+
+        <p class="soal">
+            resep untuk membuat end crystal di Minecraft adalah 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="benar4">
+                <label for="benar4"><img src="../img/end_crystal.png" alt=""></label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah2">
+                <label for="salah2"><img src="../img/tinted_glass.png" alt=""></label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah1">
+                <label for="salah1"><img src="../img/calibrated_sculk_sensor.png" alt=""></label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah4">
+                <label for="salah4"><img src="../img/beacon.png" alt=""></label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan4" id="salah3">
+                <label for="salah3"><img src="../img/ender_chest.png" alt=""></label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal3.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal5.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar4').checked){
+                localStorage.setItem('soal4', 'benar');
+            }
+            else{
+                localStorage.setItem('soal4', 'salah');
+            }
+        }
+        localStorage.getItem("soal4");
+    </script>
+</body>
+</html>

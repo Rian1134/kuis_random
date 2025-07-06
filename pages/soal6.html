@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 6</h2>
+
+        <p class="soal">
+            a = 3<br>
+            b = 2<br>
+            hasil = str(a) * b<br>
+            print(hasil)<br><br>
+            output yang dihasilkan dari code di atas adalah 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan6" id="salah1">
+                <label for="salah1">2</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan6" id="salah2">
+                <label for="salah2">5</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan6" id="benar6">
+                <label for="benar6">33</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan6" id="salah4">
+                <label for="salah4">6</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan6" id="salah3">
+                <label for="salah3">error</label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal5.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal7.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar6').checked){
+                localStorage.setItem('soal6', 'benar');
+            }
+            else{
+                localStorage.setItem('soal6', 'salah');
+            }
+        }
+        localStorage.getItem("soal6");
+    </script>
+</body>
+</html>

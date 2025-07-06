@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 10</h2>
+
+        <p class="soal">
+           dibawah ini yang merupkan algoritma permutasi Jb dari kubus Rubik adalah 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan10" id="salah1">
+                <label for="salah1">x L2 D2 L' U' L D2 L' U L'</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan10" id="salah2">
+                <label for="salah2">R2 U R' U R' U' R U' R2 U' D R' U R D'</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan10" id="benar10">
+                <label for="benar10">R U R' F' R U R' U' R' F R2 U' R'</label>
+            </div>
+      
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan10" id="salah4">
+                <label for="salah4">R2 F R U R U' R' F' R U2 R' U2 R</label>
+            </div>
+            
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan10" id="salah3">
+                <label for="salah3">x R2 F R F' R U2 r' U r U2</label>
+            </div>
+
+        </div>
+        <div class="btn-area">
+            <a href="soal9.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="result.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar10').checked){
+                localStorage.setItem('soal10', 'benar');
+            }
+            else{
+                localStorage.setItem('soal10', 'salah');
+            }
+        }
+        localStorage.getItem("soal10");
+    </script>
+</body>
+</html>

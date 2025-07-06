@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 3</h2>
+
+        <p class="soal">
+            Dibawah ini yang merupakan kata palindrom adalah 
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan3" id="benar3">
+                <label for="benar3">kodok</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan3" id="salah2">
+                <label for="salah2">tikus</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan3" id="salah1">
+                <label for="salah1">lapar</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan3" id="salah4">
+                <label for="salah4">polisi</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan3" id="salah3">
+                <label for="salah3">bus</label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal2.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal4.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar3').checked){
+                localStorage.setItem('soal3', 'benar');
+            }
+            else{
+                localStorage.setItem('soal3', 'salah');
+            }
+        }
+        localStorage.getItem("soal3");
+    </script>
+</body>
+</html>

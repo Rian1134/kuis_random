@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 7</h2>
+
+        <p class="soal">
+            Siapakah orang yang di tunjuk oleh Adolf Hitler sebagai 
+            penerus nya secara resmi.(Wasiat Hitler sebelum mati tuh).
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan7" id="salah1">
+                <label for="salah1">Herman Goring</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan7" id="salah2">
+                <label for="salah2">Franz von papen</label>
+            </div>
+      
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan7" id="salah4">
+                <label for="salah4">Joseph Gobless</label>
+            </div>
+            
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan7" id="salah3">
+                <label for="salah3">Erwin Rommel </label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan7" id="benar7">
+                <label for="benar7"> Karl Dönitz</label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal6.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal8.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar7').checked){
+                localStorage.setItem('soal7', 'benar');
+            }
+            else{
+                localStorage.setItem('soal7', 'salah');
+            }
+        }
+        localStorage.getItem("soal7");
+    </script>
+</body>
+</html>

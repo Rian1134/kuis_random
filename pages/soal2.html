@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Random</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="judul">Soal 2</h2>
+
+        <p class="soal">
+           <div class="img"><img src="../img/chess.png" alt="Mh5+"></div><br> 
+           temukan langkah brilian untuk hitam
+        </p>
+
+        <div class="pilihan">
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan2" id="salah1">
+                <label for="salah1">Kg3+</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan2" id="salah2">
+                <label for="salah2">Bxe3</label>
+            </div>
+            
+            
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan2" id="salah4">
+                <label for="salah4">f5</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan2" id="benar2">
+                <label for="benar2">Mh5+</label>
+            </div>
+
+            <div class="jawaban">
+                <input type="radio" class="radio" name="pilihan2" id="salah3">
+                <label for="salah3">Bxg4</label>
+            </div>
+        </div>
+        <div class="btn-area">
+            <a href="soal1.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
+            <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
+            <a href="soal3.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
+    <script>
+        function submit(){
+            if(document.getElementById('benar2').checked){
+                localStorage.setItem('soal2', 'benar');
+            }
+            else{
+                localStorage.setItem('soal2', 'salah');              
+            }
+        }
+        localStorage.getItem("soal2");
+    </script>
+</body>
+</html>
