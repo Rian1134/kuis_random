@@ -26,10 +26,16 @@
             </div>
 
         </div>
+        
+        
         <div class="btn-area">
-            <a href="soal8.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
             <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
-            <a href="soal10.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="window" id="window">
+            <p class="checkmark"><i class="fa-solid fa-square-check"></i></p>
+            <h3>jawaban berhasil dikirim</h3>
+            <a href="soal10.html" class="btn">lanjut</a>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
@@ -37,10 +43,12 @@
         function submit(){
             if(document.getElementById('benar9').checked){
                 localStorage.setItem('soal9', 'benar');
+                
             }
             else{
                 localStorage.setItem('soal9', 'salah');
             }
+            document.getElementById("window").style.display = "flex";
         }
         localStorage.getItem("soal9");
     </script>

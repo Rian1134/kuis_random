@@ -41,10 +41,15 @@
                 <label for="benar1">#FFF360</label>
             </div>
         </div>
+        
         <div class="btn-area">
-            <a href="../index.html" class="btn-page"><i class="fa-solid fa-arrow-left"></i></a>
             <button type="submit" class="btn-submit" onclick="submit()">kirim</button>
-            <a href="soal2.html" class="btn-page"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="window" id="window">
+            <p class="checkmark"><i class="fa-solid fa-square-check"></i></p>
+            <h3>jawaban berhasil dikirim</h3>
+            <a href="soal2.html" class="btn">lanjut</a>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/464f9fe2ca.js" crossorigin="anonymous"></script>
@@ -57,6 +62,7 @@
             else{
                 localStorage.setItem('soal1', 'salah');
             }
+            document.getElementById("window").style.display = "flex";
         }
         localStorage.getItem("soal1");
     </script>

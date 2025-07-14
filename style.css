@@ -221,3 +221,21 @@ body{
     display: none;
     margin: 10px;
 }
+
+.window{
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: white;
+    border: 3px solid var(--clr-blue1);
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+.checkmark{
+    font-size: 100px;
+    color: var(--clr-lime2);
+}
